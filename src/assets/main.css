@@ -1,35 +1,77 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+:root {
+  --ogs-accent: #F4C430;
 }
 
-a,
-.green {
+.app-dark {
+  --ogs-accent: #FFD54F;
+}
+
+.site-header {
+  background: var(--p-primary-500);
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  color: white;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.brand-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  background: white;
+  border-radius: 50%;
+  padding: 0.4rem;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.site-tagline {
+  color: var(--ogs-accent);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+.site-menubar.p-menubar {
+  background: var(--p-primary-500);
+  border: none;
+  border-radius: 0;
+}
+
+.site-menubar .p-menubar-item-link {
+  color: white;
+}
+
+.site-menubar .p-menubar-item-content:hover {
+  background: rgba(244, 196, 48, 0.18) !important;
+}
+
+.site-menubar .p-menubar-item-content:hover .p-menubar-item-link {
+  color: white !important;
+}
+
+.site-menubar .p-menubar-item-link:hover {
+  color: white !important;
+}
+
+.site-menubar .active-nav-link {
+  color: white !important;
+  border-bottom: 3px solid var(--ogs-accent);
+}
+
+.site-menubar .p-menubar-item-content:has(.active-nav-link) {
+  background: rgba(244, 196, 48, 0.12) !important;
+}
+
+
+.theme-toggle .pi {
+  color: var(--ogs-accent) !important;
+  font-size: 1.2rem;
 }
