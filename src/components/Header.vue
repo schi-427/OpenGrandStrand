@@ -25,6 +25,14 @@ const items = [
         label: 'Blog',
         route: '/blog',
     },
+    {
+        label: 'Press',
+        route: '/press'
+    },
+    {
+        label: 'Contact Us',
+        route: '/contact'
+    }
 ]
 function applyDarkMode(value: boolean) {
     isDarkMode.value = value
