@@ -39,6 +39,7 @@
   font-size: 0.95rem;
   margin-top: 0.25rem;
 }
+
 .site-menubar.p-menubar {
   background: var(--p-primary-500);
   border: none;
@@ -74,4 +75,23 @@
 .theme-toggle .pi {
   color: var(--ogs-accent) !important;
   font-size: 1.2rem;
+}
+
+.section-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--p-surface-300);
+}
+
+.section-nav a {
+  padding: 0.75rem 0;
+  color: var(--p-text-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section-nav a.section-link-active {
+  color: var(--p-primary-500);
+  border-bottom: 3px solid var(--ogs-accent);
 }
